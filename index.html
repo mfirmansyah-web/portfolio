@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+
+  <!-- Link to external stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  
+  <style>
+    /* Layout wrapper for consistent spacing */
+    .section .content-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 100px 20px 60px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .project-folder-list {
+      margin-top: 40px;
+      align-items: center;
+    }
+
+    .social-icons {
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Background Section -->
+  <div class="background">
+    <img src="img/lipai.jpg" alt="background" />
+    <div class="overlay"></div>
+  </div>
+
+  <!-- Header Section -->
+  <header>
+    <a href="#" class="logo">My Portfolio</a>
+    <ul class="navlist">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#project">Project</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- HOME Section -->
+  <section id="home" class="section active">
+    <div class="content-wrapper">
+      <div class="intro-text">
+        <h1 class="slide-bounce">Halo, Saya Muhamamd Firmansyah</h1>
+        <p>Selamat Datang di Website Saya!</p>
+        <p>Website ini dibuat sebagai wadah untuk mengakomodasi tugas, proyek, atau hal lain yang berkaitan dengan perkuliahan saya maupun di luar perkuliahan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT Section -->
+  <section id="about" class="section about-section">
+    <div class="about-container">
+      <h2>About Me</h2>
+      <p>
+        Halo! Saya adalah seorang mahasiswa <strong>Teknik Informatika angkatan 2024</strong> di <strong>Universitas Riau</strong>. 
+        Sejak kecil, saya sudah tertarik dengan dunia teknologi, khususnya IT. Ketertarikan itu mulai tumbuh saat saya bermain game — 
+        dari situ saya mulai penasaran bagaimana sebuah program atau aplikasi bisa bekerja.
+      </p>
+      <p>
+        Saya percaya bahwa teknologi bisa menjadi alat yang sangat powerful untuk menciptakan solusi dalam kehidupan sehari-hari. 
+        Karena itu, saya terus berusaha untuk mengembangkan kemampuan saya di bidang ini, baik melalui perkuliahan maupun proyek-proyek pribadi.
+      </p>
+    </div>
+  </section>
+  
+
+
+  <!-- PROJECT Section -->
+  <section id="project" class="section">
+    <div class="content-wrapper">
+      <h2>My Projects</h2>
+      <p>Beberapa projek ataupun tugas dari beberapa mata kuliah saya simpan di sini.</p>
+      <div class="project-folder-list">
+        <!-- Project Folder 1 -->
+        <div class="project-folder">
+          <button class="folder-title" onclick="toggleFiles('folder1')"><i class="fas fa-folder-open"></i>Sistem Multimedia</button>
+          <div class="folder-files" id="folder1">
+            <button onclick="openPDF('pdf/Makalah UTS.pdf')">📄 UTS (Makalah)</button>
+          </div>
+        </div>
+
+        <!-- Project Folder 2 -->
+        <div class="project-folder">
+          <button class="folder-title" onclick="toggleFiles('folder2')"><i class="fas fa-folder-open"></i>Interaksi Manusia dan Komputer</button>
+          <div class="folder-files" id="folder2">
+            <button onclick="openPDF('pdf/projectB_file1.pdf')">📄 UTS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT Section -->
+  <section id="contact" class="section">
+    <div class="content-wrapper">
+      <h2>Contact</h2>
+      <div class="social-icons">
+        <a href="https://instagram.com/m.fimofirmansyah" target="_blank" class="icon instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/6285314087628" target="_blank" class="icon whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://twitter.com/" target="_blank" class="icon twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://facebook.com/" target="_blank" class="icon facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for PDF Viewer -->
+  <div id="pdfModal" class="pdf-modal">
+    <div class="pdf-content">
+      <span class="close-btn" onclick="closePDF()">&times;</span>
+      <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <!-- Link to External JS File -->
+  <script src="js/script.js"></script>
+</body>
+</html>
